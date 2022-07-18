@@ -15,7 +15,7 @@ def Thrust(time):
     return thrust[thrust["Time"] <= time].iloc[-1]["Corrected Thrust"]
 
 def CD(mach):
-    return Coefficient[Coefficient["Mach"] <= mach].iloc[-1]["CD"]
+    return Coefficient[Coefficient["Mach"] <= abs(mach)].iloc[-1]["CD"]
 
 def SOS(altitude):
     return atm[atm["Altitude[m]"] <= altitude].iloc[-1]["Speed of sound[m/s]"]
@@ -158,3 +158,4 @@ def print_maxes():
     print(f"Max mach: {max(mac):.4f}")
 
 print_maxes()
+show_thrust()
