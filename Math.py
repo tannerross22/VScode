@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
-
-atm = pd.read_csv("atmdata.csv")
+import os
+os.chdir(r"C:\Users\Tanner\Documents\VScode")
+atm = pd.read_csv("skydata.csv")
 thrust = pd.read_csv("thrust.csv")
 Coefficient = pd.read_csv("RASaero.csv")
 
@@ -158,4 +159,5 @@ def print_maxes():
     print(f"Max mach: {max(mac):.4f}")
 
 print_maxes()
-show_thrust()
+show_altitude()
+

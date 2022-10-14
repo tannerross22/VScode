@@ -1,0 +1,4 @@
+import os
+import pandas as pd
+os.chdir(r"C:\Users\Tanner\Documents\VScode")
+pd.read_csv("skydata.csv")
